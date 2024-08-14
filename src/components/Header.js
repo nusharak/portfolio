@@ -15,13 +15,12 @@ const Header = () => {
     <Box
       sx={{
         width: '100%',
-        // background: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80)', // Gradient background
         color: 'white',
         padding: 2,
         textAlign: 'center',
         position: 'relative',
         boxSizing: 'border-box',
-        paddingTop:5,
+        paddingTop: 5,
         '@media (max-width: 600px)': {
           padding: 1,
         },
@@ -32,7 +31,7 @@ const Header = () => {
           width: { xs: 60, sm: 80, md: 100 },
           height: { xs: 60, sm: 80, md: 100 },
           mb: 2,
-          margin: 'auto', // Add this line
+          margin: 'auto',
           display: 'block'
         }}
         src={Image}
@@ -64,35 +63,38 @@ const Header = () => {
         <IconButton color="inherit" component="a" href="https://www.linkedin.com/in/nushara-riyas" target="_blank">
           <LinkedIn />
         </IconButton>
-        {/* Uncomment and adjust GitHub link as needed */}
-        {/* <IconButton color="inherit" component="a" href="https://github.com/johndoe" target="_blank">
-          <GitHub />
-        </IconButton> */}
       </Box>
       <Box
         sx={{
           display: 'flex',
-          flexDirection: { xs: 'row', md: 'column' }, // Horizontal in mobile view, vertical in desktop view
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           gap: 1,
-          overflowX: { xs: 'auto', md: 'hidden' }, // Horizontal scrolling on mobile
+          overflowX: 'auto',
           padding: 0,
           margin: 0,
+          '@media (max-width: 1000px)': {
+            flexDirection: 'row',
+            justifyContent: 'space-around',
+          },
           '&::-webkit-scrollbar': {
-            display: 'none', // Hide scrollbar for webkit browsers
+            display: 'none',
           },
         }}
       >
         <List
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'row', md: 'column' }, // Row on mobile, column on desktop
+            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             gap: 1,
             padding: 0,
             margin: 0,
+            '@media (max-width: 1000px)': {
+              display: 'none',
+            },
           }}
         >
           <ListItem button component="a" href="#about">
@@ -126,6 +128,32 @@ const Header = () => {
             <ListItemText primary="Resume" />
           </ListItem>
         </List>
+        <Box
+          sx={{
+            display: { xs: 'flex', md: 'none' }, // Show only on small screens
+            flexDirection: 'row',
+            justifyContent: 'center',
+            gap: 1,
+            padding: 0,
+            margin: 0,
+          }}
+        >
+          <IconButton color="inherit" component="a" href="#about">
+            <Info />
+          </IconButton>
+          <IconButton color="inherit" component="a" href="#projects">
+            <Code />
+          </IconButton>
+          <IconButton color="inherit" component="a" href="#experience">
+            <WorkHistory />
+          </IconButton>
+          <IconButton color="inherit" component="a" href="#contact">
+            <Mail />
+          </IconButton>
+          <IconButton color="inherit" onClick={handleOpenResume}>
+            <Work />
+          </IconButton>
+        </Box>
       </Box>
       <ResumeModal open={openResume} onClose={handleCloseResume} />
     </Box>
