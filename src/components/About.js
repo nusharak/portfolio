@@ -5,7 +5,7 @@ import Skills from './Skills';
 
 const About = () => {
   return (
-    <Box id="about" sx={{   padding: { xs: 0, sm: 2 } ,
+    <Box id="about" sx={{   padding: 2, 
       width: '100%', 
       boxSizing: 'border-box', 
       border: '2px solid #DDD', 

@@ -41,7 +41,7 @@ const MainLayout = () => {
         </Box>
         <Box
           sx={{
-            padding: 2,
+            padding: { xs: 0, sm: 2 },
             overflowY: 'auto',
             gridColumn: { xs: '1 / -1', md: 'auto' }, 
           //  background:"linear-gradient( #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80)"

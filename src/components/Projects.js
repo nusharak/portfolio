@@ -45,7 +45,7 @@ const Projects = () => {
   ];
 
   return (
-    <Box id="projects" sx={{  padding: { xs: 0, sm: 2 } , border: '2px solid #ddd', 
+    <Box id="projects" sx={{ padding: 2, border: '2px solid #ddd', 
        
        borderImage: 'linear-gradient( #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1' ,
       borderRadius: '16px' }}>
