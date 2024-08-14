@@ -10,7 +10,7 @@ const About = () => {
       boxSizing: 'border-box', 
       border: '2px solid #DDD', 
        
-      // borderImage: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1' ,
+      borderImage: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1' ,
       borderRadius: '16px',}}>
       <Typography
         variant="h4"
