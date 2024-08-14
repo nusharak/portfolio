@@ -33,7 +33,7 @@ const contactDetails = [
 
 const Contact = () => {
   return (
-    <Box id="contact" sx={{ padding: 2, border: '2px solid', 
+    <Box id="contact" sx={{  padding: { xs: 0, sm: 2 } , border: '2px solid', 
        
       borderImage: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1' ,
       borderRadius: '16px' }}>
