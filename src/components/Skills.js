@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { Grid, Stack } from '@mui/material';
+import { Box, Grid, Stack } from '@mui/material';
 
 const useStyles = makeStyles((theme) => ({
   skillContainer: {
@@ -39,7 +39,17 @@ const SkillsSection = () => {
       {skills.map((skill, index) => (
         <Stack key={index} className={classes.skillContainer}>
           <div className={classes.skillName}>{skill.name}</div>
-          <LinearProgress variant="determinate" value={skill.level} />
+          <Box sx={{
+            border: '2px solid #624cd3',
+            borderRadius: '4px',  // Optional: add rounded corners
+            overflow: 'hidden',   // Ensure border doesn't overflow
+          }}>
+            <LinearProgress
+              variant="determinate"
+              sx={{ height: 10 }} // Adjust the height if needed
+              value={skill.level}
+            />
+          </Box>
         </Stack>
       ))}
     </Grid>

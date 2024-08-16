@@ -1,17 +1,27 @@
-import React from 'react';
-import { Box, Typography, Grid, List, ListItem, ListItemText } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Typography, Grid, List, ListItem, ListItemText, Button, Dialog, DialogTitle, DialogContent, IconButton } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School'; // Graduation cap icon
+import InsertDriveFileIcon from '@mui/icons-material/InsertDriveFile'; // Certificate icon
 import Skills from './Skills';
-
+import Image from '../assets/mtech.jpeg';
+import ImageBtech from '../assets/btech.jpeg';
 const About = () => {
+ 
+  const [openBachelorDialog, setOpenBachelorDialog] = useState(false);
+  const [openMasterDialog, setOpenMasterDialog] = useState(false);
+
+
+  const handleOpenBachelorDialog = () => setOpenBachelorDialog(true);
+  const handleOpenMasterDialog = () => setOpenMasterDialog(true);
+
+  
+  const handleCloseBachelorDialog = () => setOpenBachelorDialog(false);
+  const handleCloseMasterDialog = () => setOpenMasterDialog(false);
+
   return (
-    <Box id="about" sx={{   padding: 2, 
-      width: '100%', 
-      boxSizing: 'border-box', 
-      border: '2px solid #DDD', 
-       
-      borderImage: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1' ,
-      borderRadius: '16px',}}>
+    <Box id="about" sx={{ padding: 2, width: '100%', boxSizing: 'border-box', border: '2px solid #DDD', 
+      borderImage: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1',
+      borderRadius: '16px' }}>
       <Typography
         variant="h4"
         component="h2"
@@ -27,11 +37,7 @@ const About = () => {
         variant="body1"
         gutterBottom
         sx={{
-          // fontSize: { xs: '0.875rem', sm: '1rem', md: '1.125rem' },
-          // textAlign: { xs: 'center', sm: 'left' },
-          // lineHeight: { xs: '1.4', sm: '1.6' },
-          // maxWidth: { xs: '100%', sm: '100%', md: '45%' }, // Responsive maxWidth
-          margin: '0 auto', // Center content horizontally on larger screens
+          margin: '0 auto', 
         }}
       >
         I am a dedicated team lead with a strong background in React.js, Node.js, MySQL, and MongoDB.
@@ -54,11 +60,14 @@ const About = () => {
             <ListItem>
               <SchoolIcon sx={{ marginRight: 1 }} />
               <ListItemText
-                primary="Bachelor of Science in Computer Science"
+                primary="Bachelor of Technology in Computer Science and Engineering"
                 secondary={
                   <>
-                    University of Example, 2014-2018 <br />
+                    University of Calicut, 2014-2018 <br />
                     SGPA: 8.01
+                    <IconButton onClick={handleOpenBachelorDialog} sx={{ marginLeft: 2 }}>
+                      <InsertDriveFileIcon sx={{color:'#5f4ed6'}}/>
+                    </IconButton>
                   </>
                 }
               />
@@ -66,11 +75,14 @@ const About = () => {
             <ListItem>
               <SchoolIcon sx={{ marginRight: 1 }} />
               <ListItemText
-                primary="Master of Science in Software Engineering"
+                primary="Master of Technology in in Computer Science and Engineering"
                 secondary={
                   <>
-                    Example University, 2018-2020 <br />
+                    APJ Abdul Kalam Technological University, 2018-2020 <br />
                     SGPA: 8.22
+                    <IconButton onClick={handleOpenMasterDialog} sx={{ marginLeft: 2 }}>
+                      <InsertDriveFileIcon  sx={{color:'#5f4ed6'}}/>
+                    </IconButton>
                   </>
                 }
               />
@@ -85,7 +97,7 @@ const About = () => {
               textAlign: { xs: 'center', sm: 'left' },
             }}
           >
-            Key skills
+            Key Skills
           </Typography>
           <List>
             <ListItem>Agile Practice</ListItem>
@@ -99,6 +111,24 @@ const About = () => {
           <Skills />
         </Grid>
       </Grid>
+
+      {/* Bachelor Certificate Dialog */}
+      <Dialog open={openBachelorDialog} onClose={handleCloseBachelorDialog}>
+        <DialogTitle>Bachelor of Technology in Computer Science and Engineering</DialogTitle>
+        <DialogContent>
+          <Typography variant="body1">University of Calicut, 2014-2018</Typography>
+          <img src={ImageBtech} alt="Bachelor Certificate" style={{ width: '100%', height: 'auto', marginTop: '16px' }} />
+        </DialogContent>
+      </Dialog>
+
+      {/* Master Certificate Dialog */}
+      <Dialog open={openMasterDialog} onClose={handleCloseMasterDialog}>
+        <DialogTitle>Master of Technology in in Computer Science and Engineeringg</DialogTitle>
+        <DialogContent>
+          <Typography variant="body1">APJ Abdulkalam Technological University, 2018-2020</Typography>
+          <img src={Image} alt="Master Certificate" style={{ width: '100%', height: 'auto', marginTop: '16px' }} />
+        </DialogContent>
+      </Dialog>
     </Box>
   );
 };

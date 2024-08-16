@@ -30,8 +30,8 @@ const MainLayout = () => {
             alignItems: 'center',
             // padding: 2,
             height: { 
-              xs: 300, // Fixed height for mobile (xs)
-              sm: 300, // Fixed height for tablet (sm)
+              xs: 250, // Fixed height for mobile (xs)
+              sm: 250, // Fixed height for tablet (sm)
               md: '100vh' // Full screen height for desktop (md and up)
             },
             // overflowY: 'auto',
