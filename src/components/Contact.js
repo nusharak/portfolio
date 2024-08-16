@@ -75,7 +75,7 @@ const Contact = () => {
           <Typography variant="body1" sx={{ marginBottom: 1,marginRight:3 }}>
             Nushara K.
           </Typography>
-          <img src={Sign} alt="Digital Signature" style={{ width: '150px' }} />
+          {/* <img src={Sign} alt="Digital Signature" style={{ width: '150px' }} /> */}
         </Box>
       </Box>
     </Box>
