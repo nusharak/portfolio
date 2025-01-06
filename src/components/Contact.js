@@ -2,17 +2,22 @@
 import React from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
 import { Email, Phone, WhatsApp, LinkedIn, GitHub } from '@mui/icons-material';
-import Sign from '../assets/SIGN.png'
+// import Sign from '../assets/SIGN.png'
 const contactDetails = [
   {
     icon: <Phone />,
-    text: '+91 7907427924',
-    link: 'tel:+917907427924',
+    text: '+971 553981397',
+    link: 'tel:+971553981397',
   },
   {
     icon: <Email />,
     text: 'nusharak2014@gmail.com',
     link: 'mailto:nusharak2014@gmail.com',
+  },
+  {
+    icon: <WhatsApp />,
+    text: '+971 553981397',
+    link: 'https://wa.me/553981397',
   },
   {
     icon: <WhatsApp />,

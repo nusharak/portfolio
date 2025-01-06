@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Box, Typography, List, ListItem, ListItemText, Button, Dialog, IconButton } from '@mui/material';
+import { Box, Typography, List, ListItem, ListItemText, Button, Dialog, IconButton, Stack } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import CloseIcon from '@mui/icons-material/Close';
 import certificate from '../assets/experience.pdf'
 import certificateReliving from '../assets/reliving.pdf'
+
 const Experience = () => {
   const [openDialog, setOpenDialog] = useState(false);
   const [pdfSrc, setPdfSrc] = useState("");
@@ -62,25 +63,28 @@ const Experience = () => {
             ))}
           </List>
           <Box sx={{ marginTop: 2 }}>
-            {experience.certificateUrl && (
-              <Button 
-                variant="contained" 
-                color="primary" 
-                onClick={() => handleOpen(experience.certificateUrl)}
-              >
-                View Certificate
-              </Button>
-            )}
-            {experience.salarySlipUrl && (
-              <Button 
-                variant="contained" 
-                color="secondary" 
-                onClick={() => handleOpen(experience.salarySlipUrl)}
-                sx={{ marginLeft: 2 }}
-              >
-                View Reliving Certificate
-              </Button>
-            )}
+            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+              {experience.certificateUrl && (
+                <Button 
+                  variant="contained" 
+                  color="primary" 
+                  onClick={() => handleOpen(experience.certificateUrl)}
+                  fullWidth
+                >
+                  View Certificate
+                </Button>
+              )}
+              {experience.salarySlipUrl && (
+                <Button 
+                  variant="contained" 
+                  color="secondary" 
+                  onClick={() => handleOpen(experience.salarySlipUrl)}
+                  fullWidth
+                >
+                  View Relieving Certificate
+                </Button>
+              )}
+            </Stack>
           </Box>
         </Box>
       ))}
