@@ -2,7 +2,7 @@
 import React from 'react';
 import { Dialog, DialogTitle, DialogContent, IconButton, Button, Box } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import resumePdf from '../assets/cv.pdf'; // Adjust the path as needed
+import resumePdf from '../assets/cvNushara.pdf'; // Adjust the path as needed
 
 const ResumeModal = ({ open, onClose }) => {
   return (

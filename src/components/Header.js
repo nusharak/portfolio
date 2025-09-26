@@ -20,7 +20,7 @@ const Header = () => {
         textAlign: 'center',
         position: 'relative',
         boxSizing: 'border-box',
-        paddingTop: 5,
+        paddingTop:{sm:0,md: 5},
         '@media (max-width: 600px)': {
           padding: 1,
         },
@@ -28,8 +28,8 @@ const Header = () => {
     >
       <Avatar
         sx={{
-          width: { xs: 60, sm: 90, md: 130 },
-          height: { xs: 60, sm: 90, md: 180 },
+          width: { xs: 60, sm: 80, md: 130 },
+          height: { xs: 60, sm: 80, md: 180 },
           mb: 2,
           margin: 'auto',
           display: 'block'
