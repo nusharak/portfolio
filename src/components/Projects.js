@@ -10,6 +10,43 @@ const SkillChip = styled(Chip)(({ theme }) => ({
 const Projects = () => {
   const projects = [
     {
+      name: 'FleetMaster',
+      description: [
+        'Built a comprehensive operations control tower for fleet and rider management.',
+        'Developed multi-stage Rider Onboarding including data collection, deposits, approvals, PRO processing, and license management.',
+        'Implemented Asset Management module covering Vehicles, SIMs, Uniforms, and Accessories with warehouse mapping and lifecycle tracking.',
+        'Enabled asset assignment, transfers, write-offs, and approval workflows with role-based permissions.',
+        'Designed salary calculation system integrated with rider invoices, advances, and deductions.',
+        'Created dashboards with customizable widgets, drag-and-drop functionality, and chart visualizations of sales and operational data.'
+      ],
+      skillsUsed: ['React.js', 'Next.js', 'Node.js', 'MySQL', 'Redux', 'TailwindCSS'],
+    },
+    {
+      name: 'Queue',
+      description: [
+        'Developed a digital queue management system for businesses to streamline customer flow.',
+        'Implemented real-time ticket generation and tracking with queue status updates.',
+        'Built admin dashboard for service counters, staff allocation, and average wait time analytics.',
+        'Integrated SMS/email notifications to alert customers about their turn in the queue.',
+        'Designed role-based access for admins, staff, and customers with secure authentication.',
+        'Optimized backend for concurrency handling and low-latency response under heavy load.'
+      ],
+      skillsUsed: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'Socket.IO'],
+    },
+    {
+      name: 'Booking System',
+      description: [
+        'Designed and developed an online booking platform for managing appointments and reservations.',
+        'Implemented real-time availability tracking with calendar synchronization.',
+        'Built role-based dashboards for admins, staff, and customers with secure authentication.',
+        'Integrated payment gateway for online transactions and automated invoice generation.',
+        'Enabled rescheduling, cancellations, and notifications via email/SMS.',
+        'Optimized scheduling logic to minimize conflicts and maximize resource utilization.'
+      ],
+      skillsUsed: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'JWT Authentication', 'TailwindCSS'],
+    },
+
+    {
       name: 'Signwise solutions',
       description: [
         'Developed a client portal for requesting quotations and detailing signboard specifications.',
@@ -45,10 +82,12 @@ const Projects = () => {
   ];
 
   return (
-    <Box id="projects" sx={{ padding: 2, border: '2px solid #ddd', 
-       
-       borderImage: 'linear-gradient( #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1' ,
-      borderRadius: '16px' }}>
+    <Box id="projects" sx={{
+      padding: 2, border: '2px solid #ddd',
+
+      borderImage: 'linear-gradient( #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1',
+      borderRadius: '16px'
+    }}>
       <Typography
         variant="h4"
         component="h2"

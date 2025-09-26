@@ -20,7 +20,8 @@ const SkillsSection = () => {
   const skills = [
     
     { name: 'Node.js', level: 90 },
-    { name: 'React.js', level: 80 },
+    { name: 'React.js', level: 88 },
+     { name: 'Next.js', level: 85 },
     { name: 'PHP (CodeIgniter)', level: 90 },
     { name: 'MySQL', level: 95 },
     { name: 'Wordpress', level: 75 },

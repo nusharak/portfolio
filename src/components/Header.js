@@ -3,7 +3,7 @@ import { Box, Typography, Avatar, List, ListItem, ListItemText, ListItemIcon, Ic
 import { Phone, Email, WhatsApp, LinkedIn } from '@mui/icons-material';
 import { Info, Code, Work, Mail, WorkHistory } from '@mui/icons-material';
 import ResumeModal from './Resume'; // Ensure this is the correct path
-import Image from '../../src/assets/pic.jpeg';
+import Image from '../../src/assets/Nushara.avif';
 
 const Header = () => {
   const [openResume, setOpenResume] = useState(false);
@@ -28,8 +28,8 @@ const Header = () => {
     >
       <Avatar
         sx={{
-          width: { xs: 60, sm: 80, md: 100 },
-          height: { xs: 60, sm: 80, md: 100 },
+          width: { xs: 60, sm: 90, md: 130 },
+          height: { xs: 60, sm: 90, md: 180 },
           mb: 2,
           margin: 'auto',
           display: 'block'

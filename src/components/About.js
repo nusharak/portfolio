@@ -40,8 +40,8 @@ const About = () => {
           margin: '0 auto', 
         }}
       >
-        I am a dedicated team lead with a strong background in React.js, Node.js, MySQL, and MongoDB.
-        I have over 3 years of experience in building and managing web applications.
+        I am a dedicated team lead with a strong background in React.js,Next js, Node.js, MySQL, and MongoDB.
+        I have over 4 years of experience in building and managing web applications.
       </Typography>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>

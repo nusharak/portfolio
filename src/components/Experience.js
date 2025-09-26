@@ -21,10 +21,27 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: "GW Marketing",
+      designation: "Software Engineer (Full-Stack)",
+      location: "Dubai, United Arab Emirates",
+      duration: "Feb 2025 - Present",
+      details: [
+        "Worked as a full-stack developer on three major projects — FleetMastr, Queue, and Booking System — contributing to both frontend (Next.js) and backend (Node.js, MySQL) development.",
+        "Contributed to FleetMastr, an operations control tower, by implementing Rider Onboarding workflows, Asset Management modules, and salary calculation features with role-based permissions.",
+        "Developed Queue, a real-time digital queue management system with ticket generation, live status tracking, staff allocation, and customer notifications via SMS/email.",
+        "Built Booking System modules with real-time availability tracking, calendar synchronization, and payment gateway integration for seamless appointment scheduling.",
+        "Created and maintained RESTful APIs to support smooth data exchange across internal modules and third-party services.",
+        "Worked within an Agile Scrum team, contributing to sprints, code reviews, and technical discussions, ensuring timely delivery of business-critical features."
+      ],
+      // certificateUrl: certificate,
+      // salarySlipUrl: certificateReliving
+    },
+
+    {
       company: "Skyniche Technologies",
       designation: "Team Lead",
       location: "Ottapalam, Kerala",
-      duration: "Feb 2022 - Present",
+      duration: "Feb 2022 - Aug 2024",
       details: [
         "Led a team of 5 developers in the successful design, development, and deployment of a customer portal using React.js, Node.js, and MySQL.",
         "Played a key role in the migration of legacy systems to a modern tech stack, incorporating React.js for the front end and Node.js for backend APIs.",
@@ -35,16 +52,18 @@ const Experience = () => {
         "Developed and maintained PHP-based web applications using the CodeIgniter framework, ensuring optimal performance and scalability.",
         "Integrated Google Maps API and implemented Travelling Salesman Problem (TSP) algorithm to plot minimal distance covered between multiple points, enhancing navigation efficiency and user experience."
       ],
-      certificateUrl:certificate,
+      certificateUrl: certificate,
       salarySlipUrl: certificateReliving
     }
     // You can add more experiences here
   ];
 
   return (
-    <Box id="experience" sx={{ padding: 2, border: '2px solid', 
-      borderImage: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1' ,
-      borderRadius: '16px' }}>
+    <Box id="experience" sx={{
+      padding: 2, border: '2px solid',
+      borderImage: 'linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80) 1',
+      borderRadius: '16px'
+    }}>
       <Typography variant="h4" component="h2" gutterBottom>Experience</Typography>
       {experiences.map((experience, index) => (
         <Box key={index} sx={{ marginBottom: 4 }}>
@@ -65,9 +84,9 @@ const Experience = () => {
           <Box sx={{ marginTop: 2 }}>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               {experience.certificateUrl && (
-                <Button 
-                  variant="contained" 
-                  color="primary" 
+                <Button
+                  variant="contained"
+                  color="primary"
                   onClick={() => handleOpen(experience.certificateUrl)}
                   fullWidth
                 >
@@ -75,9 +94,9 @@ const Experience = () => {
                 </Button>
               )}
               {experience.salarySlipUrl && (
-                <Button 
-                  variant="contained" 
-                  color="secondary" 
+                <Button
+                  variant="contained"
+                  color="secondary"
                   onClick={() => handleOpen(experience.salarySlipUrl)}
                   fullWidth
                 >
